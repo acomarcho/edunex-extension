@@ -1,7 +1,16 @@
 # edunex-extension
 Allows you to interact with course contents easily, especially with marking contents as read and downloading contents from a (sub)module.
 
-Demo:
+# Features
+You need to be inside a course for the extension to be available.
+
+1. Mark all as read: Allows you to label every content inside accordions in a (sub)module as read.
+2. Download all: Allows you to download attachments provided in a (sub)module, be it .pdfs or .pptxs embedded in <iframe /> components.
+3. Open all: Open all accordion contents in a (sub)module.
+4. Close all: Close all accordion contents in a (sub)module.
+5. Get video: Allows you to download embedded YouTube videos via y2mate. Each video will be represented as a y2mate link in a new tab, ready to be downloaded.
+
+# Demo
 
 https://user-images.githubusercontent.com/29671825/130596411-63409450-1f30-4bd4-a69c-e03e233537a5.mp4
 
