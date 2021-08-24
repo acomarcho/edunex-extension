@@ -35,7 +35,7 @@ function runEdunexScript() {
         const buttons = [...document.querySelectorAll(".btn-download")];
 
         buttons.forEach((btn) => {
-          btn.click();
+          window.open(btn.href);
         });
 
         const slideReaders = [...document.querySelectorAll(".slide-reader")];
