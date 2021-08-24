@@ -10,6 +10,7 @@ function runEdunexScript() {
       <button class="edunex-btn edunex-download-all-btn">Download all</button>
       <button class="edunex-btn edunex-open-all-btn">Open all</button>
       <button class="edunex-btn edunex-close-all-btn">Close all</button>
+      <button class="edunex-btn edunex-get-videos-btn">Get videos</button>
     `;
 
       document.body.append(btnContainer);
@@ -18,6 +19,7 @@ function runEdunexScript() {
       const downloadAllBtn = document.querySelector(".edunex-download-all-btn");
       const openAllBtn = document.querySelector(".edunex-open-all-btn");
       const closeAllBtn = document.querySelector(".edunex-close-all-btn");
+      const getVideosBtn = document.querySelector(".edunex-get-videos-btn");
 
       readAllBtn.addEventListener("click", () => {
         const switches = [...document.querySelectorAll("input.input-switch")];
@@ -86,6 +88,21 @@ function runEdunexScript() {
             collapseItem.style = `max-height: 0px;`;
           }
         });
+      });
+
+      getVideosBtn.addEventListener("click", () => {
+        const videoPlayers = [
+          ...document.querySelectorAll(".plyr__video-wrapper"),
+        ];
+
+        if (videoPlayers) {
+          videoPlayers.forEach((vid) => {
+            const iframe = vid.querySelector("iframe");
+            let url = iframe.src.slice(30);
+            url = url.slice(0, url.indexOf("?"));
+            window.open(`https://www.y2mate.com/youtube/${url}`);
+          });
+        }
       });
     }
   } else {
