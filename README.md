@@ -3,7 +3,7 @@ Allows you to interact with course contents easily, especially with marking cont
 
 Demo:
 
-https://user-images.githubusercontent.com/29671825/130584839-60132ba4-75d7-4be4-9eb1-db010ddd59f4.mp4
+https://user-images.githubusercontent.com/29671825/130596411-63409450-1f30-4bd4-a69c-e03e233537a5.mp4
 
 # Installation
 1. Download and extract the "edunex-extension-main" folder somewhere.
