@@ -1,0 +1,22 @@
+{
+    "name": "Edunex Extension",
+    "description": "Allows you to interact with course contents easily.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://edunex.itb.ac.id/*"],
+            "js": ["content-script.js"],
+            "css": ["content-script.css"]
+        }
+    ],
+    "icons": {
+        "16": "16x16.png",
+        "32": "32x32.png",
+        "48": "48x48.png",
+        "128": "128x128.png"
+    }
+}

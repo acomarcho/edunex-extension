@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+.edunex-btn-container {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+}
+
+.edunex-btn {
+  padding: 15px;
+  background: rgb(0, 127, 255);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.edunex-btn:hover {
+  box-shadow: 0px 10px 20px rgba(0, 127, 255, 0.25);
+}
