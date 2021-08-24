@@ -1,5 +1,5 @@
 # edunex-extension
-Allows you to interact with course contents easily.
+Allows you to interact with course contents easily, especially with marking contents as read and downloading contents from a (sub)module.
 
 Demo:
 
