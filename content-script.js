@@ -24,21 +24,23 @@ function runEdunexScript() {
       readAllBtn.addEventListener("click", () => {
         const switches = [...document.querySelectorAll("input.input-switch")];
 
-        console.log(switches);
-
-        switches.forEach((btn) => {
-          if (btn.value === "false") {
-            btn.click();
-          }
-        });
+        if (switches) {
+          switches.forEach((btn) => {
+            if (btn.value === "false") {
+              btn.click();
+            }
+          });
+        }
       });
 
       downloadAllBtn.addEventListener("click", () => {
         const buttons = [...document.querySelectorAll(".btn-download")];
 
-        buttons.forEach((btn) => {
-          window.open(btn.href);
-        });
+        if (buttons) {
+          buttons.forEach((btn) => {
+            window.open(btn.href);
+          });
+        }
 
         const slideReaders = [...document.querySelectorAll(".slide-reader")];
 
@@ -55,21 +57,23 @@ function runEdunexScript() {
           ...document.querySelectorAll(".vs-collapse-item.preview-collapse"),
         ];
 
-        buttons.forEach((btn) => {
-          if (!btn.classList.contains("open-item")) {
-            btn.classList.add("open-item");
+        if (buttons) {
+          buttons.forEach((btn) => {
+            if (!btn.classList.contains("open-item")) {
+              btn.classList.add("open-item");
 
-            const collapseItem = btn.querySelector(
-              ".vs-collapse-item--content"
-            );
+              const collapseItem = btn.querySelector(
+                ".vs-collapse-item--content"
+              );
 
-            const content = collapseItem.querySelector(".con-content--item");
+              const content = collapseItem.querySelector(".con-content--item");
 
-            collapseItem.style = `max-height: ${
-              content.getBoundingClientRect().height
-            }px;`;
-          }
-        });
+              collapseItem.style = `max-height: ${
+                content.getBoundingClientRect().height
+              }px;`;
+            }
+          });
+        }
       });
 
       closeAllBtn.addEventListener("click", () => {
@@ -77,17 +81,19 @@ function runEdunexScript() {
           ...document.querySelectorAll(".vs-collapse-item.preview-collapse"),
         ];
 
-        buttons.forEach((btn) => {
-          if (btn.classList.contains("open-item")) {
-            btn.classList.remove("open-item");
+        if (buttons) {
+          buttons.forEach((btn) => {
+            if (btn.classList.contains("open-item")) {
+              btn.classList.remove("open-item");
 
-            const collapseItem = btn.querySelector(
-              ".vs-collapse-item--content"
-            );
+              const collapseItem = btn.querySelector(
+                ".vs-collapse-item--content"
+              );
 
-            collapseItem.style = `max-height: 0px;`;
-          }
-        });
+              collapseItem.style = `max-height: 0px;`;
+            }
+          });
+        }
       });
 
       getVideosBtn.addEventListener("click", () => {
@@ -98,9 +104,19 @@ function runEdunexScript() {
         if (videoPlayers) {
           videoPlayers.forEach((vid) => {
             const iframe = vid.querySelector("iframe");
-            let url = iframe.src.slice(30);
-            url = url.slice(0, url.indexOf("?"));
-            window.open(`https://www.y2mate.com/youtube/${url}`);
+            if (iframe) {
+              let url = iframe.src.slice(30);
+              url = url.slice(0, url.indexOf("?"));
+              window.open(`https://www.y2mate.com/youtube/${url}`);
+            }
+
+            const video = vid.querySelector("video");
+            if (video) {
+              const videoSrc = video.querySelector("source");
+              if (videoSrc) {
+                window.open(videoSrc.src);
+              }
+            }
           });
         }
 
