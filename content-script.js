@@ -103,6 +103,19 @@ function runEdunexScript() {
             window.open(`https://www.y2mate.com/youtube/${url}`);
           });
         }
+
+        const youtubeParents = [
+          ...document.querySelectorAll(".youtube-parent"),
+        ];
+
+        if (youtubeParents) {
+          youtubeParents.forEach((ytParent) => {
+            const iframe = ytParent.querySelector("iframe");
+            window.open(
+              `https://www.y2mate.com/youtube/${iframe.src.slice(17)}`
+            );
+          });
+        }
       });
     }
   } else {
