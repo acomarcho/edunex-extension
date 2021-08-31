@@ -8,7 +8,7 @@ You need to be inside a course for the extension to be available.
 2. Download all: Allows you to download attachments provided in a (sub)module, be it .pdfs or .pptxs embedded in <iframe /> components.
 3. Open all: Open all accordion contents in a (sub)module.
 4. Close all: Close all accordion contents in a (sub)module.
-5. Get video: Allows you to download embedded YouTube videos via y2mate. Each video will be represented as a y2mate link in a new tab, ready to be downloaded.
+5. Get video: Allows you to download embedded YouTube videos via y2mate. Each video will be represented as a y2mate link in a new tab, ready to be downloaded. Videos hosted in Edunex CDN will be opened in a new tab, if it's not downloaded automatically, use the three dots button in lower-right corner and you can select to download.
 
 # Demo
 
