@@ -127,9 +127,13 @@ function runEdunexScript() {
         if (youtubeParents) {
           youtubeParents.forEach((ytParent) => {
             const iframe = ytParent.querySelector("iframe");
-            window.open(
-              `https://www.y2mate.com/youtube/${iframe.src.slice(17)}`
-            );
+            const srcTag = iframe.src;
+
+            if (iframe.src.startsWith("https://www.youtube.com/embed/")) {
+              window.open(`https://www.y2mate.com/youtube/${srcTag.slice(30)}`);
+            } else {
+              window.open(`https://www.y2mate.com/youtube/${srcTag.slice(17)}`);
+            }
           });
         }
       });
